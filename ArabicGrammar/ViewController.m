@@ -23,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self createArabicGrammarLessons];
+    self.title = @"Contents";
 }
 
 - (void) createArabicGrammarLessons {
@@ -46,6 +47,7 @@
     //cell.imageView.image = [UIImage imageNamed:@"imagename"];
     cell.textLabel.text = mLessonArray[indexPath.row];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", (int)indexPath.row + 1];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
